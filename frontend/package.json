@@ -2,6 +2,10 @@
   "name": "geoanalysis-frontend",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo Building frontend..."
+    "build": "echo Building frontend...",
+    "sass": "sass --watch css/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "1.87.0"
   }
 }
