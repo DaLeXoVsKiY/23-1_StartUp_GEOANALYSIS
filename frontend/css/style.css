@@ -13,19 +13,32 @@ a {
   color: #262626;
 }
 
+main {
+  max-width: 68.175vw;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #262626;
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
   height: 10vh;
+  color: #262626;
 }
 .header__nav {
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 88.958vw;
   margin: 0 auto;
+  max-width: 68.175vw;
 }
 .header__menu {
   display: flex;
@@ -38,11 +51,15 @@ a {
   font-weight: 500;
   font-size: 1rem;
   font-style: normal;
+  line-height: 100%;
+  width: 17.431vw;
 }
 .header__menu-icons {
   display: flex;
   justify-content: flex-end;
-  gap: 3.5vw;
+  align-items: center;
+  gap: 3vw;
+  width: 17.431vw;
 }
 .header__logo {
   font-family: "Jost", sans-serif;
@@ -50,6 +67,166 @@ a {
   font-weight: 500;
   font-size: 2rem;
   font-style: normal;
+  line-height: 100%;
+}
+
+.placard {
+  display: flex;
+  margin-top: 28.347vh;
+  position: relative;
+  overflow: visible;
+}
+.placard__content {
+  width: 33.75vw;
+}
+.placard__title {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 4rem;
+  font-style: normal;
+  background: linear-gradient(to right, #37943C, #1DBAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.placard__subtitle {
+  margin-top: -1.278vh;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 100%;
+}
+.placard__desprition {
+  margin-top: 1.7vh;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+.placard__button {
+  display: inline-block;
+  margin-top: 2.092vh;
+  width: 11.5vw;
+  height: 5.23vh;
+  border-radius: 2rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  background-color: white;
+  color: #262626;
+  border-image-source: linear-gradient(to right, #37943C, #1DBAD6);
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(to right, #37943C, #1DBAD6);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.placard__button:hover {
+  background-image: linear-gradient(to right, #37943C, #1DBAD6);
+  color: #ffffff;
+}
+.placard__decoration {
+  position: absolute;
+  top: -8.1vh;
+  left: 29.5vw;
+  width: 72%;
+  background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+.placard__product {
+  position: relative;
+  display: inline-block;
+  width: 50vw;
+  height: auto;
+  top: -5vh;
+  left: 11vw;
+  z-index: 1;
+}
+.placard__product-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.placard__product-coment {
+  width: 6.386vw;
+  position: absolute;
+  top: 20vh;
+  left: 3vw;
+  opacity: 70%;
+  background-color: #f1f1f1;
+  padding: 1.5vh 1.8vw;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 0rem;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  z-index: 2;
+  color: transparent;
+  background-clip: padding-box;
+}
+.placard__product-coment2 {
+  width: 6.386vw;
+  position: absolute;
+  opacity: 70%;
+  top: 35vh;
+  left: 21vw;
+  background-color: #f1f1f1;
+  padding: 1.5vh 1.2vw;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  border-bottom-left-radius: 0vh;
+  border-bottom-right-radius: 1vh;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  z-index: 2;
+  color: transparent;
+  background-clip: padding-box;
+}
+.placard__product-coment span {
+  background: linear-gradient(to right, #37943C, #1DBAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.placard__product-coment2 span {
+  background: linear-gradient(to right, #37943C, #1DBAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.placard__product-coment::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  right: 0.1vw;
+  width: 0;
+  height: 0;
+  border-width: 2vh 1.5vh 0 0;
+  border-style: solid;
+  border-top-color: #f1f1f1;
+  transform: rotate(90deg);
+  border-bottom: 0;
+  border-left: 0;
+}
+.placard__product-coment2::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5vh;
+  left: 0vw;
+  width: 0;
+  height: 0;
+  border-width: 2vh 3vh 0 0;
+  border-style: solid;
+  border-top-color: #f1f1f1;
+  transform: rotate(360deg);
+  border-bottom: 0;
+  border-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

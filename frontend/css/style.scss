@@ -3,7 +3,7 @@ $light: #ffffff;
 $green: #37943C;
 $blue: #1DBAD6;
 $brown: #5F4216;
-$green_turquoise: linear-gradient(#37943C, #1DBAD6);
+$green-turquoise: linear-gradient(to right, #37943C, #1DBAD6);
 $blue_red: linear-gradient(#DA4E50, #1982AC);
 $yellow_green: linear-gradient(#ECAA00, #54D61D);
 $black_gray: linear-gradient(#262626, #808080);
@@ -20,19 +20,30 @@ a {
     text-decoration: none;
     color: $dark;
 }
+main {
+    max-width: 68.175vw;
+    margin: 0 auto;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $dark;
+}
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: $light;
     box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
     height: 10vh;
+    color: $dark;
     &__nav {
         height: 10vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 88.958vw;
         margin: 0 auto;
-        
+        max-width: 68.175vw;
     }
     &__menu {
         display: flex;
@@ -44,11 +55,15 @@ a {
             font-weight: 500;
             font-size: 1rem;
             font-style: normal;
+            line-height: 100%;
+            width: 17.431vw;
         }
         &-icons {
             display: flex;
             justify-content: flex-end;
-            gap: 3.5vw;
+            align-items: center;
+            gap: 3vw;
+            width: 17.431vw;
         }
     }
     &__logo {
@@ -57,5 +72,164 @@ a {
         font-weight: 500;
         font-size: 2rem;
         font-style: normal;
+        line-height: 100%;
+    }
+}
+.placard {
+    display: flex;
+    margin-top: 28.347vh;
+    position: relative;
+    overflow: visible;
+    &__content {
+        width: 33.75vw;
+    }
+    &__title {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 4rem;
+        font-style: normal;
+        background:$green-turquoise;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+    &__subtitle {
+        margin-top: -1.278vh;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 100%;
+    }
+    &__desprition {
+        margin-top: 1.7vh;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.1875rem;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 2.092vh;
+        width: 11.5vw;
+        height: 5.23vh;
+        border-radius: 2rem;
+        font-weight: 400;
+        font-size: 1.25rem;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        background-color: white;
+        color: $dark;
+        border-image-source: $green-turquoise;
+        border: 2px solid transparent;
+        background-image: linear-gradient(white, white), $green-turquoise;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+    &__button:hover {
+        background-image: $green-turquoise;
+        color: $light;
+        }
+    &__decoration {
+        position: absolute;
+        top: -8.1vh;
+        left: 29.5vw;
+        width: 72%;
+        background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+        pointer-events: none;
+    }
+    &__product {
+        position: relative;
+        display: inline-block;
+        width: 50vw;
+        height: auto;   
+        top: -5vh;
+        left: 11vw;
+        z-index: 1;
+        &-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__product-coment {
+        width: 6.386vw;
+        position: absolute;
+        top: 20vh;
+        left: 3vw;
+        opacity: 70%;
+        background-color: #f1f1f1;
+        padding: 1.5vh 1.8vw;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 0rem;
+        font-weight: 600;
+        font-size: 1rem;
+        white-space: nowrap;
+        z-index: 2; 
+        color: transparent;
+        background-clip: padding-box;
+    }
+    &__product-coment2 {
+        width: 6.386vw;
+        position: absolute;
+        opacity: 70%;
+        top: 35vh;
+        left: 21vw;
+        background-color: #f1f1f1;
+        padding: 1.5vh 1.2vw;
+        border-top-left-radius: 1vh;
+        border-top-right-radius: 1vh;
+        border-bottom-left-radius: 0vh;
+        border-bottom-right-radius: 1vh;
+        font-weight: 600;
+        font-size: 1rem;
+        white-space: nowrap;
+        z-index: 2; 
+        color: transparent;
+        background-clip: padding-box;
+    }
+    &__product-coment span {
+        background: $green-turquoise;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__product-coment2 span {
+        background: $green-turquoise;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__product-coment::after {
+        content: "";
+        position: absolute;
+        bottom: -1.5vh;
+        right: 0.1vw;
+        width: 0;
+        height: 0;
+        border-width: 2vh 1.5vh 0 0;
+        border-style: solid;
+        border-top-color: #f1f1f1;
+        transform: rotate(90deg);
+        border-bottom: 0;
+        border-left: 0;
+    }
+    &__product-coment2::after {
+        content: "";
+        position: absolute;
+        bottom: -1.5vh;
+        left: 0vw;
+        width: 0;
+        height: 0;
+        border-width: 2vh 3vh 0 0;
+        border-style: solid;
+        border-top-color: #f1f1f1;
+        transform: rotate(360deg);
+        border-bottom: 0;
+        border-left: 0;
     }
 }
