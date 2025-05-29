@@ -1,0 +1,61 @@
+$dark: #262626;
+$light: #ffffff;
+$green: #37943C;
+$blue: #1DBAD6;
+$brown: #5F4216;
+$green_turquoise: linear-gradient(#37943C, #1DBAD6);
+$blue_red: linear-gradient(#DA4E50, #1982AC);
+$yellow_green: linear-gradient(#ECAA00, #54D61D);
+$black_gray: linear-gradient(#262626, #808080);
+$blue_turquoise: linear-gradient(#1DBAD6, #37943C);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $dark;
+}
+.header {
+    width: 100%;
+    background-color: $light;
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
+    height: 10vh;
+    &__nav {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 88.958vw;
+        margin: 0 auto;
+        
+    }
+    &__menu {
+        display: flex;
+        &-list {
+            display: flex;
+            gap: 2vw;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-size: 1rem;
+            font-style: normal;
+        }
+        &-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 3.5vw;
+        }
+    }
+    &__logo {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 2rem;
+        font-style: normal;
+    }
+}
