@@ -2,6 +2,8 @@ package com.illuminart.geoanalysis.controller;
 
 import com.illuminart.geoanalysis.dto.RegisterRequest;
 import com.illuminart.geoanalysis.service.UserService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,12 +16,13 @@ public class AuthController {
 
     private final UserService userService;
 
+    @Autowired
     public AuthController(UserService userService) {
         this.userService = userService;
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
         userService.register(request);
         return ResponseEntity.ok("Пользователь зарегистрирован");
     }
