@@ -47,7 +47,7 @@ cd backend
 mvn spring-boot:run
 ```
 
-По умолчанию, приложение запускается на [http://localhost:8081](http://localhost:8080).
+По умолчанию, приложение запускается на [http://localhost:8081](http://localhost:8081).
 
 ---
 
@@ -75,7 +75,7 @@ npm run build
 backend/src/main/resources/static/
 ```
 
-Spring Boot автоматически раздаёт эти файлы как статику по URL `http://localhost:8080`.
+Spring Boot автоматически раздаёт эти файлы как статику по URL `http://localhost:8081`.
 
 ---
 
