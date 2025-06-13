@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 backend/src/main/resources/application.yml
-backend/.env
+.env
 
 ### STS ###
 .apt_generated

@@ -9,5 +9,4 @@ public class GeoAnalysisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GeoAnalysisApplication.class, args);
 	}
-
 }
