@@ -1,18 +1,17 @@
 package com.illuminart.geoanalysis.dto;
 
-import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
-public class MeasurementRequest {
-    @NotNull
+@Builder
+public class MeasurementResponse {
+    private Long id;
     private Long deviceId;
-
-    @NotNull
     private Double temperature;
-
-    @NotNull
     private Double humidity;
-
     private Double light;
+    private LocalDateTime timestamp;
 }

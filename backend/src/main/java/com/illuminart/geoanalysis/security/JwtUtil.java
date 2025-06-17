@@ -1,10 +1,12 @@
 package com.illuminart.geoanalysis.security;
 
 import com.illuminart.geoanalysis.entity.User;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import lombok.Getter;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
@@ -37,5 +39,29 @@ public class JwtUtil {
                 .setExpiration(new Date(System.currentTimeMillis() + jwtExpirationMs))
                 .signWith(jwtSecret)
                 .compact();
+    }
+
+    public boolean validateToken(String token, UserDetails userDetails) {
+        final String email = extractEmail(token);
+        return (email.equals(userDetails.getUsername()) && !isTokenExpired(token));
+    }
+
+    public boolean isTokenExpired(String token) {
+        Date expiration = extractAllClaims(token).getExpiration();
+        return expiration.before(new Date());
+    }
+
+    private Claims extractAllClaims(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(jwtSecret)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
+    public static class JwtValidationException extends RuntimeException {
+        public JwtValidationException(String message) {
+            super(message);
+        }
     }
 }

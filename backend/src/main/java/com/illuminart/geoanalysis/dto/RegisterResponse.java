@@ -8,5 +8,4 @@ import lombok.*;
 public class RegisterResponse {
     private Long userId;
     private String email;
-
 }

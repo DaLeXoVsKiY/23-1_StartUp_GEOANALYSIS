@@ -1,11 +1,16 @@
 package com.illuminart.geoanalysis.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 @Entity
+@Data
+@Builder
 @Table(name = "devices")
 public class Device {
     @Id
@@ -29,4 +34,5 @@ public class Device {
 
     @OneToMany(mappedBy = "device", cascade = CascadeType.ALL)
     private List<Action> actions;
+
 }

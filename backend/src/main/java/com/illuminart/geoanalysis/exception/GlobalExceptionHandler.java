@@ -1,10 +1,12 @@
 package com.illuminart.geoanalysis.exception;
 
 import com.illuminart.geoanalysis.dto.ApiErrorResponse;
+import com.illuminart.geoanalysis.security.JwtUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -54,12 +56,6 @@ public class GlobalExceptionHandler {
                 ex.getMessage(), 401, "JWT истёк"));
     }
 
-    @ExceptionHandler(DeviceNotFoundException.class)
-    public ResponseEntity<ApiErrorResponse> handleDeviceNotFound(DeviceNotFoundException ex) {
-        return ResponseEntity.status(404).body(new ApiErrorResponse(
-                ex.getMessage(), 404, "Устройство не найдено"));
-    }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponse> handleUnexpectedException(Exception ex) {
         return ResponseEntity.status(500).body(new ApiErrorResponse(
@@ -81,5 +77,46 @@ public class GlobalExceptionHandler {
         );
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(DeviceNotFoundException.class)
+    public ResponseEntity<ApiErrorResponse> handleDeviceNotFound(DeviceNotFoundException ex) {
+        ApiErrorResponse response = new ApiErrorResponse(
+                "Устройство не найдено",
+                HttpStatus.NOT_FOUND.value(),
+                ex.getMessage()
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<ApiErrorResponse> handleAccessDenied(AccessDeniedException ex) {
+        ApiErrorResponse response = new ApiErrorResponse(
+                "Доступ запрещён",
+                HttpStatus.FORBIDDEN.value(),
+                List.of("У вас нет прав для выполнения этого действия")
+        );
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(response);
+    }
+
+    @ExceptionHandler(JwtUtil.JwtValidationException.class)
+    public ResponseEntity<ApiErrorResponse> handleJwtValidation(JwtUtil.JwtValidationException ex) {
+        ApiErrorResponse response = new ApiErrorResponse(
+                "Ошибка авторизации (JWT)",
+                HttpStatus.UNAUTHORIZED.value(),
+                List.of(ex.getMessage())
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+    }
+
+    @ExceptionHandler(JwtUtil.JwtValidationException.class)
+    public ResponseEntity<ApiErrorResponse> handleJwt(JwtUtil.JwtValidationException ex) {
+        ApiErrorResponse response = new ApiErrorResponse(
+                "Ошибка авторизации",
+                401,
+                List.of(ex.getMessage())
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
     }
 }

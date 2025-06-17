@@ -4,5 +4,8 @@ public class DeviceNotFoundException extends RuntimeException {
     public DeviceNotFoundException(Long id) {
         super("Устройство с ID " + id + " не найдено");
     }
+    public DeviceNotFoundException(String message) {
+        super(message);
+    }
 }
 

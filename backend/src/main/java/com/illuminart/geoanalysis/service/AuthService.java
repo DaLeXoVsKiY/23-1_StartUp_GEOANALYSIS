@@ -40,7 +40,6 @@ public class AuthService {
         User user = new User();
         user.setEmail(request.getEmail());
         user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
-
         User savedUser = userRepository.save(user);
         logger.info("Пользователь {} успешно зарегистрирован", request.getEmail());
         return savedUser;
