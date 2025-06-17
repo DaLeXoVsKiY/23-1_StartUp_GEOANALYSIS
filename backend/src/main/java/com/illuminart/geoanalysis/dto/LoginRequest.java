@@ -2,18 +2,20 @@ package com.illuminart.geoanalysis.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-public class RegisterRequest {
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginRequest {
 
     @NotBlank(message = "Email не может быть пустым")
     @Email(message = "Введите корректный email")
     private String email;
 
     @NotBlank(message = "Пароль не может быть пустым")
-    @Size(min = 6, max = 100, message = "Пароль должен быть от 6 до 100 символов")
     private String password;
-
 }
