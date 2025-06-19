@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEOANALYSIS</title>
+    <title>SoilSense</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+SA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
@@ -12,33 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+SA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="/23-1_StartUp_GEOANALYSIS/frontend/assets/icons/favicon.png" type="image/x-icon" />
-    <meta name="description" content="Сенсоры для анализа почвы от GEOANALYSIS — точное земледелие для фермеров и дачников." />
-    <meta name="keywords" content="анализ почвы, сенсор, фермер, земледелие, GEOANALYSIS" />
-    <meta name="author" content="GEOANALYSIS" />
+    <meta name="description" content="Сенсоры для анализа почвы от SoilSense — точное земледелие для фермеров и дачников." />
+    <meta name="keywords" content="анализ почвы, сенсор, фермер, земледелие, SoilSense" />
+    <meta name="author" content="SoilSense" />
 </head>
 <body>
     <header class="header">
         <nav class="header__nav">
             <div class="header__menu">
                 <ul class="header__menu-list">
-                    <li class="header__menu-item"><a href="#" class="header__menu-text">О нас</a></li>
+                    <li class="header__menu-item"><a href="#" class="header__menu-text">О продукте</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-text">Каталог</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-text">Контакты</a></li>
                 </ul>
             </div>
-            <h1 class="header__logo">GEOANALYSIS</h1> 
+            <h1 class="header__logo">SOILSENSE</h1>
+             
             <div class="header__menu-icons">
-                <a href="#"><img class="icons" src="../assets/icons/searching.svg" alt="иконка аккаунта"></a>
-                <a href="#"><img class="icons" src="../assets/icons/shoping cart.svg" alt="иконка аккаунта"></a>
-                <a href="#"><img class="icons" src="../assets/icons/account.svg" alt="иконка аккаунта"></a>               
+                <div class="header__menu-search">
+                    <input class="header__menu-search-input" type="text" placeholder="Поиск...">
+                    <a href="#"><img class="icons-img header__menu-search-icon" src="../assets/icons/searching.svg" alt="иконка аккаунта"></a>
+                </div>
+                <a href="#"><img class="icons-img" src="../assets/icons/shoping cart.svg" alt="иконка аккаунта"></a>
+                <a href="#" ><img class="icons-img" src="../assets/icons/account.svg" alt="иконка аккаунта"></a>               
             </div>
         </nav>
     </header>
+  
 
     <main>
         <section class="placard">
             <div class="placard__content">
-                <h1 class="placard__title">GEOANALYSIS</h1>
+                <h1 class="placard__title">SoilSense</h1>
             <p class="placard__subtitle">Технология умной почвы</p>
             <p class="placard__desprition">
                 Мы создаём умные устройства, которые помогают вам узнать, чем “дышит” земля. Просто поместите сенсор в почву — и вы получите подробную картину её состояния: минералы, влажность, уровень питательных веществ. 
@@ -48,13 +53,22 @@
             </div>
             <div class="placard__decoration">
                 <div class="placard__product">
-                    <img src="../assets/icons/placard-product_img.png" alt="продукт" class="product-img">
-                    <div class="placard__product-coment"><span>Анализ</span></div>
-                    <div class="placard__product-coment2"><span>Для почвы</span></div>
+                    <img src="../assets/icons/placard-product_img.png" alt="продукт" class="placard__product-img">
+                    <img src="../assets/icons/Property 1=Default.svg" alt="коментарий" class="placard__product-img2 ">
+                    <img src="../assets/icons/Property 1=Default (1).svg" alt="коментарий2" class="placard__product-img3 placard__product-bubble">
                 </div>
             </div>
         </section>
-        <section class="offer"></section>
+        <section class="offers">
+            <h1 class="offers-h1">ЧТО МЫ ПРЕДЛАГАЕМ</h1>
+            <div class="offers__grid">
+                <div class="offers__card1"></div>
+                <div class="offers__card2"></div>
+                <div class="offers__icons-center"><img class="offers__icons-center-img" src="/frontend/assets/icons/Frame 8.svg" alt=""></div>
+                <div class="offers__card3"></div>
+                <div class="offers__card4"></div>
+            </div>
+        </section>
         <section class="instruction"></section>
         <section class="mobile"></section>
         <section class="mission"></section>
@@ -64,7 +78,5 @@
     <footer>
         <div class="basement"></div>
     </footer>
-
-    <script src="../JS/scripts.js"></script>
 </body>
 </html>

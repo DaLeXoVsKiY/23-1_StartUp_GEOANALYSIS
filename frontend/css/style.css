@@ -13,10 +13,13 @@ a {
   color: #262626;
 }
 
-main {
-  max-width: 68.175vw;
-  margin: 0 auto;
+body {
   font-family: "Raleway", sans-serif;
+}
+
+main {
+  max-width: 68.125vw;
+  margin: 0 auto;
   font-optical-sizing: auto;
   font-style: normal;
   color: #262626;
@@ -27,63 +30,101 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+  height: 5.208vw;
   background-color: #ffffff;
-  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
-  height: 10vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   color: #262626;
+  z-index: 999;
 }
 .header__nav {
-  height: 10vh;
+  margin: 0 auto;
+  max-width: 68.125vw;
+  height: 5.208vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5%;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+  font-weight: 600;
   margin: 0 auto;
-  max-width: 68.175vw;
 }
 .header__menu {
+  position: relative;
   display: flex;
+  justify-items: start;
+  flex: 1;
+  align-items: center;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 .header__menu-list {
   display: flex;
-  gap: 2vw;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
+  gap: 2.5vw;
+  font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
   font-weight: 500;
-  font-size: 1rem;
-  font-style: normal;
-  line-height: 100%;
-  width: 17.431vw;
 }
 .header__menu-icons {
   display: flex;
-  justify-content: flex-end;
+  flex: 1;
+  justify-content: end;
+  margin: 0 auto;
+  gap: 3.686vw;
   align-items: center;
-  gap: 3vw;
-  width: 17.431vw;
 }
-.header__logo {
-  font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-size: 2rem;
-  font-style: normal;
-  line-height: 100%;
+.header__menu-icons img {
+  width: 1.3vw;
+  z-index: 8;
+}
+.header__menu-search {
+  position: relative;
+  height: 32px;
+  max-width: 260px;
+}
+.header__menu-search-icon {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 20px;
+  height: 20px;
+}
+.header__menu-search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  padding-left: 20px;
+  padding-right: 60px;
+}
+.header__menu-search-input::placeholder {
+  font-family: "Raleway", sans-serif;
 }
 
 .placard {
   display: flex;
-  margin-top: 28.347vh;
   position: relative;
+  max-width: 68.125vw;
+  margin: 13vw auto 0;
   overflow: visible;
 }
 .placard__content {
-  width: 33.75vw;
+  width: 33.021vw;
 }
 .placard__title {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: 4rem;
+  font-weight: 600;
+  font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
   font-style: normal;
   background: linear-gradient(to right, #37943C, #1DBAD6);
   -webkit-background-clip: text;
@@ -91,31 +132,30 @@ main {
   display: inline-block;
 }
 .placard__subtitle {
-  margin-top: -1.278vh;
+  margin-top: -0.313rem;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
   line-height: 100%;
 }
 .placard__desprition {
-  margin-top: 1.7vh;
+  margin-top: 1rem;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
   line-height: 1.1875rem;
 }
 .placard__button {
   display: inline-block;
-  margin-top: 2.092vh;
-  width: 11.5vw;
-  height: 5.23vh;
-  border-radius: 2rem;
+  margin-top: 1.25rem;
+  width: 35.27%;
+  height: 19.14%;
+  border-radius: 1.563vw;
   font-weight: 400;
-  font-size: 1.25rem;
-  font-family: "Raleway", sans-serif;
+  font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
   font-optical-sizing: auto;
   background-color: white;
   color: #262626;
   border-image-source: linear-gradient(to right, #37943C, #1DBAD6);
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   background-image: linear-gradient(white, white), linear-gradient(to right, #37943C, #1DBAD6);
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -128,9 +168,10 @@ main {
 }
 .placard__decoration {
   position: absolute;
-  top: -8.1vh;
-  left: 29.5vw;
-  width: 72%;
+  display: inline-block;
+  left: 26.25vw;
+  top: -9vw;
+  width: 70%;
   background-image: url(../assets/icons/placard-decoration-background\ 2.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -141,92 +182,666 @@ main {
 .placard__product {
   position: relative;
   display: inline-block;
-  width: 50vw;
-  height: auto;
-  top: -5vh;
-  left: 11vw;
+  top: 1.721vw;
+  left: 12.833vw;
   z-index: 1;
 }
 .placard__product-img {
+  width: 29vw;
+  height: auto;
+  display: block;
+}
+.placard__product-img2 {
+  width: 7.292vw;
+  position: relative;
+  display: inline-block;
+  top: -19.792vw;
+  left: 2.031vw;
+  z-index: 2;
+  display: block;
+}
+.placard__product-img3 {
+  width: 7.292vw;
+  position: relative;
+  display: inline-block;
+  top: -13.802vw;
+  left: 21.917vw;
+  z-index: 2;
+  display: block;
+}
+
+.offers {
+  margin-top: 12.879vw;
+  align-items: center;
+}
+.offers-h1 {
+  display: flex;
+  justify-content: center;
+  color: #262626;
+  opacity: 0.6;
+}
+.offers__grid {
+  margin-top: 1.597vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  position: relative;
+}
+.offers__icons-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5vw;
+  height: 5vw;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.offers__icons-center-img {
   width: 100%;
   height: auto;
   display: block;
 }
-.placard__product-coment {
-  width: 6.386vw;
-  position: absolute;
-  top: 20vh;
-  left: 3vw;
-  opacity: 70%;
-  background-color: #f1f1f1;
-  padding: 1.5vh 1.8vw;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 0rem;
-  font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
-  z-index: 2;
-  color: transparent;
-  background-clip: padding-box;
+.offers__card1 {
+  background-image: url(/frontend/assets/icons/Property\ 1=Default.png);
+  width: 100%;
+  height: 11.708vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
 }
-.placard__product-coment2 {
-  width: 6.386vw;
-  position: absolute;
-  opacity: 70%;
-  top: 35vh;
-  left: 21vw;
-  background-color: #f1f1f1;
-  padding: 1.5vh 1.2vw;
-  border-top-left-radius: 1vh;
-  border-top-right-radius: 1vh;
-  border-bottom-left-radius: 0vh;
-  border-bottom-right-radius: 1vh;
-  font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
-  z-index: 2;
-  color: transparent;
-  background-clip: padding-box;
+.offers__card1:hover {
+  background-image: url(/frontend/assets/icons/Property\ 1=on.png);
 }
-.placard__product-coment span {
-  background: linear-gradient(to right, #37943C, #1DBAD6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.offers__card2 {
+  background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(2\).png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
 }
-.placard__product-coment2 span {
-  background: linear-gradient(to right, #37943C, #1DBAD6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.offers__card2:hover {
+  background-image: url(/frontend/assets/icons/Property\ 1=on\ \(1\).png);
 }
-.placard__product-coment::after {
-  content: "";
-  position: absolute;
-  bottom: -1.5vh;
-  right: 0.1vw;
-  width: 0;
-  height: 0;
-  border-width: 2vh 1.5vh 0 0;
-  border-style: solid;
-  border-top-color: #f1f1f1;
-  transform: rotate(90deg);
-  border-bottom: 0;
-  border-left: 0;
+.offers__card3 {
+  background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(3\).png);
+  width: 100%;
+  height: 11.708vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
 }
-.placard__product-coment2::after {
-  content: "";
-  position: absolute;
-  bottom: -1.5vh;
-  left: 0vw;
-  width: 0;
-  height: 0;
-  border-width: 2vh 3vh 0 0;
-  border-style: solid;
-  border-top-color: #f1f1f1;
-  transform: rotate(360deg);
-  border-bottom: 0;
-  border-left: 0;
+.offers__card3:hover {
+  background-image: url(/frontend/assets/icons/Property\ 1=on\ \(2\).png);
+}
+.offers__card4 {
+  background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(1\).png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+}
+.offers__card4:hover {
+  background-image: url(/frontend/assets/icons/Property\ 1=on\ \(3\).png);
+}
+
+@media (max-width: 1440px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.208vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #262626;
+    z-index: 999;
+  }
+  .header__nav {
+    margin: 0 auto;
+    max-width: 68.125vw;
+    height: 5.208vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  .header__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .header__menu-list {
+    display: flex;
+    gap: 2.5vw;
+    font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
+    font-weight: 500;
+  }
+  .header__menu-icons {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    margin: 0 auto;
+    gap: 3.686vw;
+    align-items: center;
+  }
+  .header__menu-icons img {
+    width: 1.3vw;
+    z-index: 8;
+  }
+  .header__menu-search {
+    position: relative;
+    height: 23px;
+    max-width: 260px;
+  }
+  .header__menu-search-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 20px;
+    height: 20px;
+  }
+  .header__menu-search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+    padding-right: 60px;
+  }
+  .header__menu-search-input::placeholder {
+    font-family: "Raleway", sans-serif;
+  }
+  .placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+  }
+  .placard__content {
+    width: 38.021vw;
+  }
+  .placard__title {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+    font-style: normal;
+    background: linear-gradient(to right, #37943C, #1DBAD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .placard__subtitle {
+    margin-top: 0rem;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+    line-height: 100%;
+  }
+  .placard__desprition {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+    line-height: 1rem;
+  }
+  .placard__button {
+    display: inline-block;
+    margin-top: 1.25rem;
+    width: 35.27%;
+    height: 19.14%;
+    border-radius: 1.563vw;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+    font-optical-sizing: auto;
+    background-color: white;
+    color: #262626;
+    border-image-source: linear-gradient(to right, #37943C, #1DBAD6);
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, #37943C, #1DBAD6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .placard__button:hover {
+    background-image: linear-gradient(to right, #37943C, #1DBAD6);
+    color: #ffffff;
+  }
+  .placard__decoration {
+    position: absolute;
+    display: inline-block;
+    left: 36.25vw;
+    top: -9vw;
+    width: 70%;
+    background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .placard__product {
+    position: relative;
+    display: inline-block;
+    top: 1.721vw;
+    left: 12.833vw;
+    z-index: 1;
+  }
+  .placard__product-img {
+    width: 29vw;
+    height: auto;
+    display: block;
+  }
+  .placard__product-img2 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -19.792vw;
+    left: 1.031vw;
+    z-index: 2;
+    display: block;
+  }
+  .placard__product-img3 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -13.802vw;
+    left: 22.917vw;
+    z-index: 2;
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.208vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #262626;
+    z-index: 999;
+  }
+  .header__nav {
+    margin: 0 auto;
+    max-width: 68.125vw;
+    height: 5.208vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  .header__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .header__menu-list {
+    display: flex;
+    gap: 2.5vw;
+    font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
+    font-weight: 500;
+  }
+  .header__menu-icons {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    margin: 0 auto;
+    gap: 3.686vw;
+    align-items: center;
+  }
+  .header__menu-icons img {
+    width: 1.3vw;
+    z-index: 8;
+  }
+  .header__menu-search {
+    position: relative;
+    height: 23px;
+    max-width: 120px;
+  }
+  .header__menu-search-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 20px;
+    height: 20px;
+  }
+  .header__menu-search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .header__menu-search-input::placeholder {
+    font-family: "Raleway", sans-serif;
+    font-size: small;
+  }
+  .placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+  }
+  .placard__content {
+    width: 44.021vw;
+  }
+  .placard__title {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+    font-style: normal;
+    background: linear-gradient(to right, #37943C, #1DBAD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .placard__subtitle {
+    margin-top: 0rem;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+    line-height: 100%;
+  }
+  .placard__desprition {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+    line-height: 1rem;
+  }
+  .placard__button {
+    display: inline-block;
+    margin-top: 1.25rem;
+    width: 35.27%;
+    height: 17.14%;
+    border-radius: 1.563vw;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+    font-optical-sizing: auto;
+    background-color: white;
+    color: #262626;
+    border-image-source: linear-gradient(to right, #37943C, #1DBAD6);
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, #37943C, #1DBAD6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .placard__button:hover {
+    background-image: linear-gradient(to right, #37943C, #1DBAD6);
+    color: #ffffff;
+  }
+  .placard__decoration {
+    position: absolute;
+    display: inline-block;
+    left: 36.25vw;
+    top: -9vw;
+    width: 70%;
+    background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .placard__product {
+    position: relative;
+    display: inline-block;
+    top: 1.721vw;
+    left: 12.833vw;
+    z-index: 1;
+  }
+  .placard__product-img {
+    width: 29vw;
+    height: auto;
+    display: block;
+  }
+  .placard__product-img2 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -19.792vw;
+    left: 1.031vw;
+    z-index: 2;
+    display: block;
+  }
+  .placard__product-img3 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -13.802vw;
+    left: 22.917vw;
+    z-index: 2;
+    display: block;
+  }
+}
+@media (max-width: 865px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.208vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #262626;
+    z-index: 999;
+  }
+  .header__nav {
+    margin: 0 auto;
+    max-width: 68.125vw;
+    height: 5.208vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  .header__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .header__menu-list {
+    display: flex;
+    gap: 2.5vw;
+    font-size: 1.272vw;
+    font-weight: 500;
+  }
+  .header__menu-icons {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    margin: 0 auto;
+    gap: 3.686vw;
+    align-items: center;
+  }
+  .header__menu-icons img {
+    width: 1.3vw;
+    z-index: 8;
+  }
+  .header__menu-search {
+    position: relative;
+    height: 23px;
+    max-width: 120px;
+  }
+  .header__menu-search-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 20px;
+    height: 20px;
+  }
+  .header__menu-search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .header__menu-search-input::placeholder {
+    font-family: "Raleway", sans-serif;
+    font-size: small;
+  }
+  .placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+  }
+  .placard__content {
+    width: 44.021vw;
+  }
+  .placard__title {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+    font-style: normal;
+    background: linear-gradient(to right, #37943C, #1DBAD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .placard__subtitle {
+    margin-top: 0rem;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+    line-height: 100%;
+  }
+  .placard__desprition {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+    line-height: 1rem;
+  }
+  .placard__button {
+    display: inline-block;
+    margin-top: 1.25rem;
+    width: 35.27%;
+    height: 17.14%;
+    border-radius: 1.563vw;
+    font-weight: 400;
+    font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+    font-optical-sizing: auto;
+    background-color: white;
+    color: #262626;
+    border-image-source: linear-gradient(to right, #37943C, #1DBAD6);
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, #37943C, #1DBAD6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .placard__button:hover {
+    background-image: linear-gradient(to right, #37943C, #1DBAD6);
+    color: #ffffff;
+  }
+  .placard__decoration {
+    position: absolute;
+    display: inline-block;
+    left: 36.25vw;
+    top: -9vw;
+    width: 70%;
+    background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .placard__product {
+    position: relative;
+    display: inline-block;
+    top: 1.721vw;
+    left: 12.833vw;
+    z-index: 1;
+  }
+  .placard__product-img {
+    width: 29vw;
+    height: auto;
+    display: block;
+  }
+  .placard__product-img2 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -19.792vw;
+    left: 1.031vw;
+    z-index: 2;
+    display: block;
+  }
+  .placard__product-img3 {
+    width: 7.292vw;
+    position: relative;
+    display: inline-block;
+    top: -13.802vw;
+    left: 22.917vw;
+    z-index: 2;
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

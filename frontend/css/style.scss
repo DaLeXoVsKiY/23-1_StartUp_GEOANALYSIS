@@ -4,14 +4,14 @@ $green: #37943C;
 $blue: #1DBAD6;
 $brown: #5F4216;
 $green-turquoise: linear-gradient(to right, #37943C, #1DBAD6);
-$blue_red: linear-gradient(#DA4E50, #1982AC);
-$yellow_green: linear-gradient(#ECAA00, #54D61D);
-$black_gray: linear-gradient(#262626, #808080);
-$blue_turquoise: linear-gradient(#1DBAD6, #37943C);
+$blue_red: linear-gradient(to right, #DA4E50, #1982AC);
+$yellow_green: linear-gradient(to right, #ECAA00, #54D61D);
+$black_gray: linear-gradient(to right, #262626, #808080);
+$blue_turquoise: linear-gradient(to right, #1DBAD6, #37943C);
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 ul {
     list-style: none;
@@ -20,10 +20,12 @@ a {
     text-decoration: none;
     color: $dark;
 }
+body{
+  font-family: "Raleway", sans-serif;
+}
 main {
-    max-width: 68.175vw;
+  max-width: 68.125vw;
     margin: 0 auto;
-    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: $dark;
@@ -31,63 +33,103 @@ main {
 .header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0;  
     width: 100%;
+    height: 5.208vw;
     background-color: $light;
-    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
-    height: 10vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     color: $dark;
-    &__nav {
-        height: 10vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 68.175vw;
+    z-index: 999;
+      &__nav {
+      margin: 0 auto;
+      max-width: 68.125vw;
+      height: 5.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    &-list {
+      display: flex;
+      gap: 2.5vw;
+      font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
+      font-weight: 500;
     }
-    &__menu {
-        display: flex;
-        &-list {
-            display: flex;
-            gap: 2vw;
-            font-family: "Raleway", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-size: 1rem;
-            font-style: normal;
-            line-height: 100%;
-            width: 17.431vw;
-        }
-        &-icons {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 3vw;
-            width: 17.431vw;
-        }
+    &-icons {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      margin: 0 auto;
+      gap: 3.686vw;
+      align-items: center;
+      img {
+        width: 1.30vw;
+        z-index: 8;
+      }
     }
-    &__logo {
-        font-family: "Jost", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-size: 2rem;
-        font-style: normal;
-        line-height: 100%;
+    &-search {
+      position: relative;
+      height: 32px;
+      max-width: 260px;
+      &-icon{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        width: 20px;
+        height: 20px;
+      }
+      &-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: #f1f1f1;
+        -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        padding-left: 20px;
+        padding-right: 60px;
+      }
+      &-input::placeholder{
+        font-family: "Raleway", sans-serif;
+      }
     }
+  }
 }
 .placard {
     display: flex;
-    margin-top: 28.347vh;
     position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
     overflow: visible;
     &__content {
-        width: 33.75vw;
+        width: 33.021vw;
     }
     &__title {
         font-family: "Jost", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 700;
-        font-size: 4rem;
+        font-weight: 600;
+        font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
         font-style: normal;
         background:$green-turquoise;
         -webkit-background-clip: text;
@@ -95,31 +137,30 @@ main {
         display: inline-block;
     }
     &__subtitle {
-        margin-top: -1.278vh;
+        margin-top: -0.313rem;
         font-weight: 400;
-        font-size: 1.25rem;
+        font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
         line-height: 100%;
     }
     &__desprition {
-        margin-top: 1.7vh;
+        margin-top: 1rem;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
         line-height: 1.1875rem;
     }
     &__button {
         display: inline-block;
-        margin-top: 2.092vh;
-        width: 11.5vw;
-        height: 5.23vh;
-        border-radius: 2rem;
+        margin-top: 1.25rem;
+        width: 35.27%;
+        height: 19.14%;
+        border-radius: 1.563vw;
         font-weight: 400;
-        font-size: 1.25rem;
-        font-family: "Raleway", sans-serif;
+        font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
         font-optical-sizing: auto;
         background-color: white;
         color: $dark;
         border-image-source: $green-turquoise;
-        border: 2px solid transparent;
+        border: 3px solid transparent;
         background-image: linear-gradient(white, white), $green-turquoise;
         background-origin: border-box;
         background-clip: content-box, border-box;
@@ -132,9 +173,10 @@ main {
         }
     &__decoration {
         position: absolute;
-        top: -8.1vh;
-        left: 29.5vw;
-        width: 72%;
+        display: inline-block;
+        left: 26.25vw;
+        top: -9vw;
+        width: 70%;
         background-image: url(../assets/icons/placard-decoration-background\ 2.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -145,91 +187,669 @@ main {
     &__product {
         position: relative;
         display: inline-block;
-        width: 50vw;
-        height: auto;   
-        top: -5vh;
-        left: 11vw;
+        top: 1.721vw;
+        left: 12.833vw;
         z-index: 1;
         &-img {
-            width: 100%;
+            width: 29vw;
             height: auto;
             display: block;
         }
+        &-img2 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -19.792vw;
+            left: 2.031vw;
+            z-index: 2;
+            display: block;
+        }
+        &-img3 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -13.802vw;
+            left: 21.917vw;
+            z-index: 2;
+            display: block;
+        }
     }
-    &__product-coment {
-        width: 6.386vw;
+}
+.offers {
+  margin-top: 12.879vw;
+  align-items: center;
+  &-h1 {
+    display: flex;
+    justify-content: center;
+    color: #262626;
+    opacity: 0.6;
+  }
+  &__grid {
+    margin-top: 1.597vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+  }
+  &__icons-center {
+    position: absolute;
+    top: 50%;;
+    left: 50%;
+    width: 5vw;
+    height: 5vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    &-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__card1 {
+      background-image: url(/frontend/assets/icons/Property\ 1=Default.png);
+      width: 100%;
+      height: 11.708vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+      &:hover {
+    background-image: url(/frontend/assets/icons/Property\ 1=on.png);
+    }
+  }
+  &__card2 {
+    background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(2\).png);
+    width: 100%;
+    height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+      &:hover {
+    background-image: url(/frontend/assets/icons/Property\ 1=on\ \(1\).png);
+    }
+  }
+  &__card3 {
+    background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(3\).png);
+      width: 100%;
+    height: 11.708vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+       &:hover {
+    background-image: url(/frontend/assets/icons/Property\ 1=on\ \(2\).png);
+  } 
+    }
+  &__card4 {
+    background-image: url(/frontend/assets/icons/Property\ 1=Default\ \(1\).png);
+    width: 100%;
+    height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+      &:hover {
+    background-image: url(/frontend/assets/icons/Property\ 1=on\ \(3\).png);
+    }
+}
+}
+@media (max-width: 1440px) {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 5.208vw;
+    background-color: $light;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: $dark;
+    z-index: 999;
+      &__nav {
+      margin: 0 auto;
+      max-width: 68.125vw;
+      height: 5.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    &-list {
+      display: flex;
+      gap: 2.5vw;
+      font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
+      font-weight: 500;
+    }
+    &-icons {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      margin: 0 auto;
+      gap: 3.686vw;
+      align-items: center;
+      img {
+        width: 1.30vw;
+        z-index: 8;
+      }
+    }
+    &-search {
+      position: relative;
+      height: 23px;
+      max-width: 260px;
+      &-icon{
         position: absolute;
-        top: 20vh;
-        left: 3vw;
-        opacity: 70%;
+        top: 10%;
+        right: 5%;
+        width: 20px;
+        height: 20px;
+      }
+      &-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 14px;
         background-color: #f1f1f1;
-        padding: 1.5vh 1.8vw;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 0rem;
-        font-weight: 600;
-        font-size: 1rem;
-        white-space: nowrap;
-        z-index: 2; 
-        color: transparent;
-        background-clip: padding-box;
+        -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        padding-left: 20px;
+        padding-right: 60px;
+      }
+      &-input::placeholder{
+        font-family: "Raleway", sans-serif;
+      }
     }
-    &__product-coment2 {
-        width: 6.386vw;
-        position: absolute;
-        opacity: 70%;
-        top: 35vh;
-        left: 21vw;
-        background-color: #f1f1f1;
-        padding: 1.5vh 1.2vw;
-        border-top-left-radius: 1vh;
-        border-top-right-radius: 1vh;
-        border-bottom-left-radius: 0vh;
-        border-bottom-right-radius: 1vh;
-        font-weight: 600;
-        font-size: 1rem;
-        white-space: nowrap;
-        z-index: 2; 
-        color: transparent;
-        background-clip: padding-box;
+  }
+}
+.placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+    &__content {
+        width: 38.021vw;
     }
-    &__product-coment span {
-        background: $green-turquoise;
+    &__title {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+        font-style: normal;
+        background:$green-turquoise;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        display: inline-block;
     }
-    &__product-coment2 span {
-        background: $green-turquoise;
+    &__subtitle {
+        margin-top: 0rem;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+        line-height: 100%;
+    }
+    &__desprition {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+        line-height: 1rem;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 1.25rem;
+        width: 35.27%;
+        height: 19.14%;
+        border-radius: 1.563vw;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+        font-optical-sizing: auto;
+        background-color: white;
+        color: $dark;
+        border-image-source: $green-turquoise;
+        border: 3px solid transparent;
+        background-image: linear-gradient(white, white), $green-turquoise;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+    &__button:hover {
+        background-image: $green-turquoise;
+        color: $light;
+        }
+    &__decoration {
+        position: absolute;
+        display: inline-block;
+        left: 36.25vw;
+        top: -9vw;
+        width: 70%;
+        background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+        pointer-events: none;
+    }
+    &__product {
+        position: relative;
+        display: inline-block;
+        top: 1.721vw;
+        left: 12.833vw;
+        z-index: 1;
+        &-img {
+            width: 29vw;
+            height: auto;
+            display: block;
+        }
+        &-img2 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -19.792vw;
+            left: 1.031vw;
+            z-index: 2;
+            display: block;
+        }
+        &-img3 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -13.802vw;
+            left: 22.917vw;
+            z-index: 2;
+            display: block;
+        }
+    }
+}
+}
+@media (max-width: 1024px) {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 5.208vw;
+    background-color: $light;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: $dark;
+    z-index: 999;
+      &__nav {
+      margin: 0 auto;
+      max-width: 68.125vw;
+      height: 5.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    &-list {
+      display: flex;
+      gap: 2.5vw;
+      font-size: clamp(0.625rem, 0.5556rem + 0.3704vw, 1rem);
+      font-weight: 500;
+    }
+    &-icons {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      margin: 0 auto;
+      gap: 3.686vw;
+      align-items: center;
+      img {
+        width: 1.30vw;
+        z-index: 8;
+      }
+    }
+    &-search {
+      position: relative;
+      height: 23px;
+      max-width: 120px;
+      &-icon{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        width: 20px;
+        height: 20px;
+      }
+      &-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: #f1f1f1;
+        -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        padding-left: 20px;
+        padding-right: 30px;
+      }
+      &-input::placeholder{
+        font-family: "Raleway", sans-serif;
+        font-size: small;
+      }
+    }
+  }
+}
+.placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+    &__content {
+        width: 44.021vw;
+    }
+    &__title {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+        font-style: normal;
+        background:$green-turquoise;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        display: inline-block;
     }
-    &__product-coment::after {
-        content: "";
+    &__subtitle {
+        margin-top: 0rem;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+        line-height: 100%;
+    }
+    &__desprition {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+        line-height: 1rem;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 1.25rem;
+        width: 35.27%;
+        height: 17.14%;
+        border-radius: 1.563vw;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+        font-optical-sizing: auto;
+        background-color: white;
+        color: $dark;
+        border-image-source: $green-turquoise;
+        border: 3px solid transparent;
+        background-image: linear-gradient(white, white), $green-turquoise;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+    &__button:hover {
+        background-image: $green-turquoise;
+        color: $light;
+        }
+    &__decoration {
         position: absolute;
-        bottom: -1.5vh;
-        right: 0.1vw;
-        width: 0;
-        height: 0;
-        border-width: 2vh 1.5vh 0 0;
-        border-style: solid;
-        border-top-color: #f1f1f1;
-        transform: rotate(90deg);
-        border-bottom: 0;
-        border-left: 0;
+        display: inline-block;
+        left: 36.25vw;
+        top: -9vw;
+        width: 70%;
+        background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+        pointer-events: none;
     }
-    &__product-coment2::after {
-        content: "";
+    &__product {
+        position: relative;
+        display: inline-block;
+        top: 1.721vw;
+        left: 12.833vw;
+        z-index: 1;
+        &-img {
+            width: 29vw;
+            height: auto;
+            display: block;
+        }
+        &-img2 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -19.792vw;
+            left: 1.031vw;
+            z-index: 2;
+            display: block;
+        }
+        &-img3 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -13.802vw;
+            left: 22.917vw;
+            z-index: 2;
+            display: block;
+        }
+    }
+}
+}
+@media (max-width: 865px) {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 5.208vw;
+    background-color: $light;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: $dark;
+    z-index: 999;
+      &__nav {
+      margin: 0 auto;
+      max-width: 68.125vw;
+      height: 5.208vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5%;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-items: start;
+    flex: 1;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    &-list {
+      display: flex;
+      gap: 2.5vw;
+      font-size: 1.272vw;
+      font-weight: 500;
+    }
+    &-icons {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      margin: 0 auto;
+      gap: 3.686vw;
+      align-items: center;
+      img {
+        width: 1.30vw;
+        z-index: 8;
+      }
+    }
+    &-search {
+      position: relative;
+      height: 23px;
+      max-width: 120px;
+      &-icon{
         position: absolute;
-        bottom: -1.5vh;
-        left: 0vw;
-        width: 0;
-        height: 0;
-        border-width: 2vh 3vh 0 0;
-        border-style: solid;
-        border-top-color: #f1f1f1;
-        transform: rotate(360deg);
-        border-bottom: 0;
-        border-left: 0;
+        top: 10%;
+        right: 5%;
+        width: 20px;
+        height: 20px;
+      }
+      &-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: #f1f1f1;
+        -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        padding-left: 20px;
+        padding-right: 30px;
+      }
+      &-input::placeholder{
+        font-family: "Raleway", sans-serif;
+        font-size: small;
+      }
     }
+  }
+}
+.placard {
+    display: flex;
+    position: relative;
+    max-width: 68.125vw;
+    margin: 13vw auto 0;
+    overflow: visible;
+    &__content {
+        width: 44.021vw;
+    }
+    &__title {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: clamp(2rem, 1.2958rem + 2.2535vw, 4rem);
+        font-style: normal;
+        background:$green-turquoise;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+    &__subtitle {
+        margin-top: 0rem;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.5093rem + 0.6173vw, 1.25rem);
+        line-height: 100%;
+    }
+    &__desprition {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: clamp(0.5rem, 0.3239rem + 0.5634vw, 1rem);
+        line-height: 1rem;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 1.25rem;
+        width: 35.27%;
+        height: 17.14%;
+        border-radius: 1.563vw;
+        font-weight: 400;
+        font-size: clamp(0.625rem, 0.4049rem + 0.7042vw, 1.25rem);
+        font-optical-sizing: auto;
+        background-color: white;
+        color: $dark;
+        border-image-source: $green-turquoise;
+        border: 3px solid transparent;
+        background-image: linear-gradient(white, white), $green-turquoise;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        }
+    &__button:hover {
+        background-image: $green-turquoise;
+        color: $light;
+        }
+    &__decoration {
+        position: absolute;
+        display: inline-block;
+        left: 36.25vw;
+        top: -9vw;
+        width: 70%;
+        background-image: url(../assets/icons/placard-decoration-background\ 2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+        pointer-events: none;
+    }
+    &__product {
+        position: relative;
+        display: inline-block;
+        top: 1.721vw;
+        left: 12.833vw;
+        z-index: 1;
+        &-img {
+            width: 29vw;
+            height: auto;
+            display: block;
+        }
+        &-img2 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -19.792vw;
+            left: 1.031vw;
+            z-index: 2;
+            display: block;
+        }
+        &-img3 {
+            width: 7.292vw;
+            position: relative;
+            display: inline-block;
+            top: -13.802vw;
+            left: 22.917vw;
+            z-index: 2;
+            display: block;
+        }
+    }
+}
 }
