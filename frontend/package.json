@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "echo Building frontend...",
-    "sass": "sass --watch css/style.scss css/style.css"
+    "sass": "sass --watch styles/styles.scss styles/styles.css"
   },
   "devDependencies": {
     "sass": "1.87.0"
