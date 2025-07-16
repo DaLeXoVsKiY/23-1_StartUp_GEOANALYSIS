@@ -339,12 +339,17 @@ main {
   }
 }
 
-/*.how-it-works{
+.how-it-works{
+  display: flex;
+  flex-direction: column;
   margin-top: function.rem(60);
+  gap: function.rem(40);
 }
+
 .scheme{
   @include flex-between;
   gap: function.rem(20);
+
   &-title{
     background: $blue_turquoise;
     -webkit-background-clip: text;
@@ -362,17 +367,24 @@ main {
     align-items: start;
     gap: function.rem(178);
     text-align: right;
+
     &:last-child{
       margin-bottom: function.rem(133);
     }
   }
+
   &__right{
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: function.rem(178);
+    gap: function.rem(160);
+
     &:first-child{
       margin-bottom: function.rem(134);
+    }
+
+    &-second{
+      margin-top: function.rem(140);
     }
   }
 }
@@ -384,29 +396,13 @@ main {
     font-size: 14px;
     color: #7d7d7d;
   }
-  &-btn{
-    margin-top: function.rem(31);
-    display: inline-block;
-    width: auto;
-    margin-top: 1.25rem;
-    padding: function.rem(14) function.rem(50);
-    border-radius: 1.563vw;
-    border: 3px solid gray;
-    background: #fff;
-    cursor: pointer;
-    &:hover{
-      background: $blue_turquoise;
-      color: white;
-      border: 3px solid transparent;
-    }
-  }
-}*/
-//Тестовый код, не рабочий, можно использовать некоторые части кода
+}
 
 
 .about-product{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: function.rem(30);
 
   &__button {
@@ -508,12 +504,92 @@ main {
   }
 }
 
+.mobile{
+  margin: function.rem(60) 0;
+
+  &__container{
+    @include flex-between;
+    align-items: center;
+  }
+}
+
+.main-title{
+  background: $blue_red;
+  @include gradient-text;
+  @include fluid-text(64, 12);
+}
+
+.content__main{
+  display: flex;
+  flex-direction: column;
+  gap: function.rem(10);
+}
+
+.container-content{
+  display: flex;
+  flex-direction: column;
+  gap: function.rem(40);
+}
+
+.content__features{
+  display: flex;
+  flex-direction: column;
+  gap: function.rem(40);
+}
+
+.gradient-button {
+  position: relative;
+  display: inline-block;
+  color: black;
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit; // Совпадает с родителем
+    padding: 2px;
+    background: linear-gradient(to right, #1982AC, #DA4E50); // Базовый градиент
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  // Модификатор для мобильной кнопки
+  &--instruction {
+    padding: 12px 60px;
+
+    &::before {
+      background: $green_turquoise; // НОВЫЙ градиент рамки
+    }
+  }
+
+  // Ещё пример — большой вариант с другим градиентом
+  &--big {
+    padding: 20px 80px;
+    font-size: 1.2rem;
+
+    &::before {
+      background: linear-gradient(to right, #00C3FF, #FFFF1C); // Ещё другой градиент
+    }
+  }
+}
 
 
+.download-button{
+  display: flex;
+  align-items: center;
+  gap: function.rem(40);
+}
 
-// .mobile__imgs{
-//   display: none;
-// }
+
 
 
 .mission{
@@ -522,8 +598,7 @@ main {
   align-items: center;
   &-title{
     background: $green_turquoise;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-text;
     font-weight: bold;
     @include fluid-text(64, 10);
   }
@@ -531,6 +606,7 @@ main {
     @include fluid-text(16, 1);
     max-width: 75%;
     margin-top: function.rem(10);
+    padding-bottom: function.rem(30);
   }
   &-btn{
     margin-top: function.rem(30);
@@ -552,14 +628,14 @@ main {
   }
   &-title{
     background: $green_turquoise;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-text;
     font-weight: bold;
     @include fluid-text(64, 10);
   }
   &-text{
     @include fluid-text(16, 1);
     max-width: 75%;
+    padding-bottom: function.rem(30);
   }
   &-btn{
     margin-top: function.rem(30);
