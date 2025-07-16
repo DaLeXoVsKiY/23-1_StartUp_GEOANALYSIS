@@ -523,6 +523,37 @@ main {
   gap: 2.5rem;
 }
 
+.hero {
+  margin-top: 12.5rem;
+  background-image: url("../assets/icons/error404-background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 1/0.35;
+}
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+.hero__title {
+  background: linear-gradient(to right, #37943C, #1DBAD6);
+  font-size: clamp(6.25rem, 4.1666666667rem + 9.2592592593vw, 12.5rem);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: "Jost", sans-serif;
+}
+.hero__subtitle {
+  text-align: center;
+}
+.hero__buttons {
+  display: flex;
+  gap: 2.5rem;
+}
+
 .mission {
   display: flex;
   justify-content: center;

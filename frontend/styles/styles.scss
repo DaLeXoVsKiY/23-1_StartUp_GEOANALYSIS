@@ -589,8 +589,38 @@ main {
   gap: function.rem(40);
 }
 
+.hero{
+  margin-top: function.rem(200);
+  background-image: url("../assets/icons/error404-background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 1 / 0.35;
 
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: function.rem(40);
+    align-items: center;
+  }
 
+  &__title{
+    background: $green_turquoise;
+    @include fluid-text(200, 100);
+    @include gradient-text;
+    font-family: "Jost", sans-serif;
+  }
+
+  &__subtitle{
+    text-align: center;
+  }
+
+  &__buttons{
+    display: flex;
+    gap: function.rem(40);
+  }
+}
 
 .mission{
   display: flex;
@@ -614,8 +644,6 @@ main {
   }
   &-img{}
 }
-
-
 
 .faq{
   h1{
